@@ -1,4 +1,5 @@
 import React from 'react';
+import Item from './Item';
 
 class ShoppingList extends React.Component {
     constructor() {
@@ -6,9 +7,12 @@ class ShoppingList extends React.Component {
     }
 
     render() {
+        console.log(this.props);
         return (
             <div className="shopping-list">
-                ShoppingList
+                {
+
+                }
                 <button className="clear-btn">
                     Clear Purchased
                 </button>

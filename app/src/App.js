@@ -34,7 +34,7 @@ class App extends React.Component {
           <Form />
         </div>
         <ShoppingList 
-          shopping={this.state.shopping}
+          shoppingList={this.state.shopping}
         />
       </div>
     );
