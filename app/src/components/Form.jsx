@@ -7,9 +7,15 @@ class Form extends React.Component {
 
     render() {
         return (
-            <div>
-                Form
-            </div>
+            <form>
+                <input 
+                    type="text"
+                    // value={}
+                    name="item"
+                    onChange={() => console.log('form working')}
+                />
+                <button>Add</button>
+            </form>
         );
     }
 }

@@ -7,8 +7,11 @@ class ShoppingList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="shopping-list">
                 ShoppingList
+                <button className="clear-btn">
+                    Clear Purchased
+                </button>
             </div>
         );
     }
