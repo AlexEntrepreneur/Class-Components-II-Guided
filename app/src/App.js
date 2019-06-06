@@ -8,7 +8,12 @@ const shopping = [
     name: 'Test',
     purchased: false,
     id: 0
-  }
+  },
+  {
+    name: 'Test 2',
+    purchased: false,
+    id: 1
+  },
 ];
 
 class App extends React.Component {
@@ -18,6 +23,19 @@ class App extends React.Component {
       shopping,
       text: ''
     };
+  }
+
+  addItem = (event) => {
+    event.preventDefault();
+    console.log("item is added!");
+  }
+
+  markItemAsPurchased = () => {
+    console.log("item was purchased");
+  }
+
+  clearPurchasedItems = () => {
+    console.log("cleared purchased items!");
   }
   
   testBinding() {
@@ -31,7 +49,7 @@ class App extends React.Component {
       <div className="App">
         <div className="header">
           <h1 onClick={this.testBinding.bind({ lemon: true })}>Shopping List</h1>
-          <Form />
+          <Form addFunction={this.addItem} />
         </div>
         <ShoppingList 
           shoppingList={this.state.shopping}

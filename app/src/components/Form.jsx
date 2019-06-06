@@ -7,12 +7,12 @@ class Form extends React.Component {
 
     render() {
         return (
-            <form>
+            <form onSubmit={this.props.addFunction}>
                 <input 
                     type="text"
                     // value={}
                     name="item"
-                    onChange={() => console.log('form working')}
+                    onChange={() => {}}
                 />
                 <button>Add</button>
             </form>

@@ -10,7 +10,7 @@ class Item extends React.Component {
             <div
                 className="item"
             >
-                <p>Test Text</p>
+                <p>{ this.props.itemData.name }</p>
             </div>
         );
     }
