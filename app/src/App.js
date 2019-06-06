@@ -53,6 +53,7 @@ class App extends React.Component {
         </div>
         <ShoppingList 
           shoppingList={this.state.shopping}
+          markItemAsPurchasedFunction={this.markItemAsPurchased}
         />
       </div>
     );
