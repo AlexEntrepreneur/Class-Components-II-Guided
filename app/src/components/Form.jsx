@@ -12,7 +12,7 @@ class Form extends React.Component {
                     type="text"
                     value={this.props.formText}
                     name="item"
-                    onChange={() => {}}
+                    onChange={this.props.onFormChangeFunction}
                 />
                 <button>Add</button>
             </form>

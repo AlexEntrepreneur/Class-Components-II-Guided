@@ -49,7 +49,9 @@ class App extends React.Component {
   }
 
   onFormChange = (event) => {
-    console.log(event.target.value);
+    this.setState({
+      formText: event.target.value
+    });
   }
   
   testBinding() {
