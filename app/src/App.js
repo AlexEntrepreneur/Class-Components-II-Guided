@@ -33,7 +33,6 @@ class App extends React.Component {
       purchased: false,
       id: Date.now()
     }
-    console.dir(newItem);
 
     this.setState({
       shopping: this.state.shopping.concat(newItem)
@@ -41,7 +40,25 @@ class App extends React.Component {
   }
 
   markItemAsPurchased = (id) => {
-    console.log(`item ${id} was purchased`);
+    this.setState((previousState) => {
+      return {
+        shopping: this.state.shopping.map(item => {
+          // We are mapping through the this.state.shopping array
+          if (item.id === id) {
+            // If the id of the item we clicked on is equal to the
+            // current "item" id (that we are mapping through), then change something
+            return {
+              ...item,
+              // We are toggling the "purchased" property from true to false/false to true
+              purchased: !item.purchased
+            }
+          } else {
+            // Or else leave the current item unchanged
+            return item;
+          }
+        })
+      }
+    });
   }
 
   clearPurchasedItems = () => {
