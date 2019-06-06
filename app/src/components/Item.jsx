@@ -9,6 +9,7 @@ class Item extends React.Component {
         return (
             <div
                 className="item"
+                onClick={() => this.props.markPurchasedFunction(this.props.itemData.id)}
             >
                 <p>{ this.props.itemData.name }</p>
             </div>

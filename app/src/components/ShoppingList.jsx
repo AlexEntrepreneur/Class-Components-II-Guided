@@ -14,7 +14,7 @@ class ShoppingList extends React.Component {
                        return <Item 
                         key={item.id} 
                         itemData={item} 
-                        markPurchasedFunction={this.markItemAsPurchasedFunction}
+                        markPurchasedFunction={this.props.markItemAsPurchasedFunction}
                         /> 
                     })
                 }

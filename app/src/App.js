@@ -30,8 +30,8 @@ class App extends React.Component {
     console.log("item is added!");
   }
 
-  markItemAsPurchased = () => {
-    console.log("item was purchased");
+  markItemAsPurchased = (id) => {
+    console.log(`item ${id} was purchased`);
   }
 
   clearPurchasedItems = () => {
