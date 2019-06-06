@@ -1,5 +1,6 @@
 import React from 'react';
 import ShoppingList from './components/ShoppingList';
+import Form from './components/Form';
 import './styles.css';
 
 const shopping = 'Test';
@@ -24,6 +25,7 @@ class App extends React.Component {
       <div className="App">
         <div className="header">
           <h1 onClick={this.testBinding.bind({ lemon: true })}>Shopping List</h1>
+          <Form />
         </div>
         <ShoppingList />
       </div>
