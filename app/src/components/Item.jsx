@@ -8,7 +8,7 @@ class Item extends React.Component {
     render() {
         return (
             <div
-                className="item"
+                className={`item ${this.props.itemData.purchased === true ? 'purchased' : ''}`}
                 onClick={() => this.props.markPurchasedFunction(this.props.itemData.id)}
             >
                 <p>{ this.props.itemData.name }</p>
