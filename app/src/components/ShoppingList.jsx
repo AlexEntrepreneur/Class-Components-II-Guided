@@ -7,11 +7,12 @@ class ShoppingList extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <div className="shopping-list">
                 {
-
+                    this.props.shoppingList.map(item => {
+                       return <Item key={item.id} itemData={item}/> 
+                    })
                 }
                 <button className="clear-btn">
                     Clear Purchased
