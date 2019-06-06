@@ -21,7 +21,7 @@ class App extends React.Component {
     super();
     this.state = {
       shopping,
-      formText: 'Kitten'
+      formText: ''
     };
   }
 
@@ -62,7 +62,9 @@ class App extends React.Component {
   }
 
   clearPurchasedItems = () => {
-    console.log("cleared purchased items!");
+    this.setState({
+      shopping: this.state.shopping.filter(item => item.purchased === false)
+    });
   }
 
   onFormChange = (event) => {
