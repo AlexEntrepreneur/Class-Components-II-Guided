@@ -47,6 +47,10 @@ class App extends React.Component {
   clearPurchasedItems = () => {
     console.log("cleared purchased items!");
   }
+
+  onFormChange = (event) => {
+    console.log(event.target.value);
+  }
   
   testBinding() {
     // We have to explicitly provide the value of this or
@@ -59,7 +63,11 @@ class App extends React.Component {
       <div className="App">
         <div className="header">
           <h1 onClick={this.testBinding.bind({ lemon: true })}>Shopping List</h1>
-          <Form addFunction={this.addItem} formText={this.state.formText} />
+          <Form 
+            addFunction={this.addItem} 
+            formText={this.state.formText}
+            onFormChangeFunction={this.onFormChange}
+          />
         </div>
         <ShoppingList 
           shoppingList={this.state.shopping}
