@@ -18,7 +18,7 @@ class ShoppingList extends React.Component {
                         /> 
                     })
                 }
-                <button className="clear-btn">
+                <button className="clear-btn" onClick={this.props.clearPurchasedFunction}>
                     Clear Purchased
                 </button>
             </div>

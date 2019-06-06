@@ -10,7 +10,7 @@ class Form extends React.Component {
             <form onSubmit={this.props.addFunction}>
                 <input 
                     type="text"
-                    // value={}
+                    value="test value"
                     name="item"
                     onChange={() => {}}
                 />

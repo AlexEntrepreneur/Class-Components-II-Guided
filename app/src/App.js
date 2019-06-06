@@ -21,13 +21,23 @@ class App extends React.Component {
     super();
     this.state = {
       shopping,
-      text: ''
+      formText: ''
     };
   }
 
   addItem = (event) => {
     event.preventDefault();
-    console.log("item is added!");
+
+    const newItem = {
+      name: event.target.item.value,
+      purchased: false,
+      id: 2
+    }
+    console.dir(newItem);
+
+    this.setState({
+      shopping: this.state.shopping.concat()
+    });
   }
 
   markItemAsPurchased = (id) => {
@@ -54,6 +64,7 @@ class App extends React.Component {
         <ShoppingList 
           shoppingList={this.state.shopping}
           markItemAsPurchasedFunction={this.markItemAsPurchased}
+          clearPurchasedFunction={this.clearPurchasedItems}
         />
       </div>
     );
