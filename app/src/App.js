@@ -21,7 +21,7 @@ class App extends React.Component {
     super();
     this.state = {
       shopping,
-      formText: ''
+      formText: 'Kitten'
     };
   }
 
@@ -31,12 +31,12 @@ class App extends React.Component {
     const newItem = {
       name: event.target.item.value,
       purchased: false,
-      id: 2
+      id: Date.now()
     }
     console.dir(newItem);
 
     this.setState({
-      shopping: this.state.shopping.concat()
+      shopping: this.state.shopping.concat(newItem)
     });
   }
 
@@ -59,7 +59,7 @@ class App extends React.Component {
       <div className="App">
         <div className="header">
           <h1 onClick={this.testBinding.bind({ lemon: true })}>Shopping List</h1>
-          <Form addFunction={this.addItem} />
+          <Form addFunction={this.addItem} formText={this.state.formText} />
         </div>
         <ShoppingList 
           shoppingList={this.state.shopping}
